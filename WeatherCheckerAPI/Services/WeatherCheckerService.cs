@@ -1,3 +1,6 @@
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+
 namespace WeatherCheckerApi.Services
 {
     public class WeatherCheckerService
@@ -23,6 +26,8 @@ namespace WeatherCheckerApi.Services
                 throw new ArgumentException("Country Name cannot be empty");
             }
 
+try
+{
             var apiUrl = $"http://api.openweathermap.org/data/2.5/weather?q={cityName},{countryName}&appid={_openWeatherApiKey}";
             var response = await _httpClient.GetAsync(apiUrl);
 
@@ -31,8 +36,18 @@ namespace WeatherCheckerApi.Services
                 throw new Exception("Failed to retrieve data from Open Weather's Api.");
             }
 
-            var weatherData = await response.Content.ReadAsStringAsync();
-            return weatherData;
+            dynamic weatherData = JsonConvert.DeserializeObject(await response.Content.ReadAsStringAsync());
+            
+            return weatherData.weather[0].description;
+    
+}
+catch (System.Exception)
+{
+    
+    throw;
+}
+
+
         }
     }
 }

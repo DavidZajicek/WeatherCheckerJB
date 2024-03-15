@@ -1,22 +1,15 @@
-function checkWeather() {
-    var cityName = document.getElementById("cityInput").value;
-    var countryName = document.getElementById("countryInput").value;
-    //apiKey = 
+document.getElementById("weatherForm").addEventListener("submit", async function(event){
+    event.preventDefault();
 
-    if (!cityName || !countryName) {
-        alert("Please enter both a city and country name");
-        return;
+    const city = document.getElementById("cityInput").value;
+    const country = document.getElementById("countryInput").value;
+
+    try {
+        const response = await fetch(`http://127.0.0.1:5136/api/WeatherChecker/${city}/${country}`);
+        //const data = response.json();
+        document.getElementById("weatherResult").innerText = await response.text();
+    } catch (error) {
+        console.error("Error fetchubng weather data: ", error);
+        document.getElementById("weatherResult").innerText = "Error fetching Weather data.";
     }
-
-    $.ajax({
-        URL: "http://localhost:5136/api/WeatherChecker/" + encodeURIComponent(cityName) + "/" + encodeURIComponent(countryName),
-        method: "GET",
-        success: function(response) {
-            $("#weatherData").html(response);
-        },
-        error: function(xhr, status, error) {
-            var errorMessage = xhr.responseText || "An error occured while fetching Weather Data";
-            $("#weatherData").html("Error: " + errorMessage);
-        }
-    })
-}
+})

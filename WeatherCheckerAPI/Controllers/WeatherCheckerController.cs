@@ -24,7 +24,6 @@ namespace WeatherCheckerApi.Controllers
             try
             {
                 var weatherData = await _weatherChecker.GetWeather(cityName, countryName);
-                //TODO: Return only the Description from WeatherData
                 return Ok(weatherData);
             }
             catch (ArgumentException ex)

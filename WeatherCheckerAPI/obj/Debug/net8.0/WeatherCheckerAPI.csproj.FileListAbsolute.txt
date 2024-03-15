@@ -65,3 +65,4 @@ C:\git\WeatherChecker\WeatherChecker\WeatherCheckerAPI\obj\Debug\net8.0\refint\W
 C:\git\WeatherChecker\WeatherChecker\WeatherCheckerAPI\obj\Debug\net8.0\WeatherCheckerAPI.pdb
 C:\git\WeatherChecker\WeatherChecker\WeatherCheckerAPI\obj\Debug\net8.0\WeatherCheckerAPI.genruntimeconfig.cache
 C:\git\WeatherChecker\WeatherChecker\WeatherCheckerAPI\obj\Debug\net8.0\ref\WeatherCheckerAPI.dll
+C:\git\WeatherChecker\WeatherChecker\WeatherCheckerAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
