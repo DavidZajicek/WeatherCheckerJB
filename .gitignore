@@ -1,0 +1,52 @@
+# Visual Studio Code
+.vscode/
+
+# NuGet Packages
+*.nuget.props
+*.lock
+packages/
+*.nupkg
+debug/
+release/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+*.vscode/
+.vs/
+*_i.c
+*_p.c
+*.suo
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# Visual Studio Test Files
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
