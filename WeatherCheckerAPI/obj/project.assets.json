@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\WeatherChecker\\WeatherCheckerApi\\WeatherCheckerAPI.csproj",
+      "projectUniqueName": "C:\\git\\WeatherChecker\\WeatherChecker\\WeatherCheckerAPI\\WeatherCheckerAPI.csproj",
       "projectName": "WeatherCheckerAPI",
-      "projectPath": "C:\\git\\WeatherChecker\\WeatherCheckerApi\\WeatherCheckerAPI.csproj",
+      "projectPath": "C:\\git\\WeatherChecker\\WeatherChecker\\WeatherCheckerAPI\\WeatherCheckerAPI.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\WeatherChecker\\WeatherCheckerApi\\obj\\",
+      "outputPath": "C:\\git\\WeatherChecker\\WeatherChecker\\WeatherCheckerAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
