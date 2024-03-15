@@ -30,12 +30,15 @@ namespace WeatherCheckerApi
                 app.UseHsts();
             }
 
+            app.UseCors("AllowAll");
+
             app.UseSwagger();
             app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
