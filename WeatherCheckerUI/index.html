@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Checking App</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="WeatherChecker.js"></script>
+    </head>
+
+    <body>
+        <h1>Weather Checking App</h1>
+        <label for="cityInput">City: </label>
+        <input type="text" id="cityInput" placeholder="Enter City name">
+        <label for="countryInput">Country: </label>
+        <input type="text" id="countryInput" placeholder="Enter Country Name">
+        <button onclick="checkWeather()">Check Weather</button>
+        <div id="weatherData"></div>
+    </body>
+</html>
