@@ -11,10 +11,10 @@ namespace WeatherCheckerApi.Controllers
     [ApiController]
     public class WeatherCheckerController : ControllerBase
     {
-        private readonly WeatherCheckerService _weatherChecker;
+        private readonly IWeatherCheckerService _weatherChecker;
         private readonly ApiKeyTracker _apiKeyTracker;
 
-        public WeatherCheckerController(WeatherCheckerService weatherChecker, ApiKeyTracker apiKeyTracker)
+        public WeatherCheckerController(IWeatherCheckerService weatherChecker, ApiKeyTracker apiKeyTracker)
         {
             _weatherChecker = weatherChecker;
             _apiKeyTracker = apiKeyTracker;

@@ -12,7 +12,7 @@ public class ApiKeyTracker
         _apiKeys = apiKeys;
     }
 
-    internal bool IsValidApiKey(string apiKey)
+    public bool IsValidApiKey(string apiKey)
     {
         return _apiKeys.Contains(apiKey);
     }
