@@ -23,7 +23,6 @@ namespace WeatherCheckerApi.Controllers
         [HttpGet("{cityName}/{countryName}")]
         public async Task<ActionResult<string>> GetWeather(string cityName, string countryName, [FromQuery] string apiKey)
         {
-            //TODO: Acutally add the usage tracker functionality
             if (string.IsNullOrWhiteSpace(apiKey))
             {
                 return BadRequest("API Key is required.");

@@ -14,7 +14,7 @@ public class ApiKeyTracker
 
     internal bool IsValidApiKey(string apiKey)
     {
-        return apiKey.Contains(apiKey);
+        return _apiKeys.Contains(apiKey);
     }
 
     public bool CanUseApiKey(string apiKey)
