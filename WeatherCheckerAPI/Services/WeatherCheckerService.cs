@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace WeatherCheckerApi.Services
 {
-    public class WeatherCheckerService
+    public class WeatherCheckerService : IWeatherCheckerService
     {
         private readonly HttpClient _httpClient;
         private readonly string _openWeatherApiKey;

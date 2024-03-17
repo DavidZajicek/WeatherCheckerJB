@@ -21,10 +21,11 @@ namespace WeatherCheckerApi
                 throw new ApplicationException("ApiKeys configuration is missing or invalid.");
             }
 
-            services.AddSingleton<ApiKeyTracker>(provider => new ApiKeyTracker(apiKeys));
+            var usageLimit = Configuration.GetSection("usageLimit").Get<int>();
+            services.AddSingleton<ApiKeyTracker>(provider => new ApiKeyTracker(apiKeys, usageLimit));
 
             services.AddControllers();
-            services.AddScoped<WeatherCheckerService>(_ => new WeatherCheckerService("8b7535b42fe1c551f18028f64e8688f7"));
+            services.AddScoped<IWeatherCheckerService, WeatherCheckerService>(_ => new WeatherCheckerService("8b7535b42fe1c551f18028f64e8688f7"));
             services.AddSwaggerGen();
             services.AddCors(options =>
             {

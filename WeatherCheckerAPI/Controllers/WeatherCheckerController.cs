@@ -35,7 +35,7 @@ namespace WeatherCheckerApi.Controllers
 
             if (!_apiKeyTracker.CanUseApiKey(apiKey))
             {
-                return StatusCode(429, "API Key usage limit reached. PLease try again later.");
+                return StatusCode(429, "API Key usage limit reached. Please try again later.");
             }
 
             _apiKeyTracker.TrackApiKeyUsage(apiKey);
